@@ -79,4 +79,4 @@ Released under the [MIT License](LICENSE).
 
 Wishing you profitable investments ☕📈
 
-*P.S. Your interest is the best motivation to keep adding more API functionality to this script.* 🚀
+*P.S. Your interest is the best motivation to keep adding more API functionality to this script.* 🚀🚀
