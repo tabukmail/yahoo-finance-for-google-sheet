@@ -3,11 +3,11 @@
 
 
 ◖◗ **Installation:**  
-[1] Open Google Sheet  
-[2] Go to [Extensions] and click [App Scripts]  
-[3] Clean up opened "Code.gs" file   
-[4] Copy and Paste the code from here and click "Save Project"  
-Now, YAHOOF() Function available in you Google Sheet File.  
+[1] Open your Google Sheet  
+[2] Click **Extensions → Apps Script**  
+[3] Delete any existing code in the **Code.gs** file that opens  
+[4] Copy the full script from [**Yahoof.gs**](./Yahoof.gs), paste it in, then press **Ctrl+S** (or **Cmd+S** on Mac) to save  
+[5] Go back to your Google Sheet — `=YAHOOF()` is now ready to use  
 <br />
 ◖◗ **ARGUMENTS of the Function =YAHOOF():** <br />
 **[Stock]** -> Stock name (ticker) listed on Yahoo Finance (No default value)<br /> 	
