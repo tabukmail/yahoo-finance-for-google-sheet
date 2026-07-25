@@ -298,8 +298,18 @@ var closePrice = stage1.chart.result[0].indicators.quote[0].close;
 var volumes = stage1.chart.result[0].indicators.quote[0].volume;
 
 
+// intervals where Yahoo timestamps mark a calendar day/period rather than an exact
+// intraday instant; these must be read as UTC calendar dates, not shifted by the
+// script's local timezone offset, or dates near UTC midnight roll back a day
+// (e.g. weekly bars at 04:00 UTC becoming Sunday in US timezones behind UTC-4)
+var dateOnlyIntervals = ["1d", "5d", "1wk", "1mo", "3mo"];
+
 function timeConverter(UNIX_timestamp){
   var a = new Date(UNIX_timestamp * 1000);
+  if(dateOnlyIntervals.includes(intervalArg)){
+    var utcMidnight = Date.UTC(a.getUTCFullYear(), a.getUTCMonth(), a.getUTCDate());
+    return 25569 + utcMidnight/86400000;
+  }
   var date =25569 + (a.getTime()-a.getTimezoneOffset()*60000)/86400000;
   return date
 }
