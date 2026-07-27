@@ -13,7 +13,7 @@
  *@twitter.com/tabukmail
  */
 
-
+//final version 
 function YAHOOF(stock, interval, start, end) {
 
 //data for comparing and checking argument type
